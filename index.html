@@ -3,53 +3,86 @@
 <head>
     <meta charset="UTF-8" />
     <title>Test Webpage!</title>
+
     <style>
         body {
             font-family: Gill Sans, sans-serif;
+
+        }
+        #layout {
+            display: flex;
+            justify-content: space-between;
+            gap: 2em;
+            max-width: 1000px;
+            margin: 30px auto;
         }
         #header {
             background-color: purple;
             color: white;
             text-align: center;
-            font-size: 2em;
+            font-size: 2em; 
+
             padding-top: 2em;
             padding-bottom: 2em;
             border-bottom: solid rgb(73, 64, 64);
         }
-        #layout {
-            display: flex;
-            gap: 2em; /* consistent space between boxes */
-            max-width: 1000px; /* keeps layout from stretching too much */
-            margin: 30px auto;
-        }
         #information, #sidenotes {
-            flex: 1 1 0; /* both boxes will resize equally */
+            background-color: rgb(202, 200, 200);
+            flex: 1 1 0;
+            margin: 0;
             padding: 20px;
             box-shadow: -4px 2px 15px rgba(0,0,0,0.5);
             border-radius: 15px;
-            background-color: rgb(202, 200, 200);
+
+            
         }
-        #sidenotes {
-            background: rgb(207, 200, 200);
-        }
+
         @media (max-width: 700px) {
             #layout {
                 flex-direction: column;
-                gap: 1em;
+                gap: 2em;
             }
         }
+       /* #sidenotes {
+             float: right; <--- doesnt work in a flex container 
+            background:rgb(207, 200, 200);
+            flex: 0 0 auto;    
+            margin: 30px 15px 30px 15px;
+            padding: 10px;
+            
+
+            border-radius: 15px;
+            box-shadow: -4px 2px 15px rgba(0,0,0,0.5);
+
+        } */
+    
+
+
     </style>
+
+
 </head>
+
 <body>
-    <h1 id="header">Test</h1>
+
+    <h1 id="header">Test</h1>    
+
     <div id="layout">
         <div id="information">
             <h2>test</h2>
-            <p>What is Lorem Ipsum? Lorem upsum is</p>
-        </div>
+    
+            <p>What is Lorem Ipsum? Lorem upsum is
+
+
+            </p>
+
+    </div>
+
         <section id="sidenotes">
             <h2>Test</h2>
-        </section>
+
+        </section>      
     </div>
+
 </body>
 </html>
